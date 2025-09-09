@@ -25,11 +25,17 @@ export type settingsItemAdd = {
      * Determines in which tab your settings item will be displayed.
      * Defaults to plugins.
      */
-    tab?: 'shop' | 'system' | 'plugins',
+    tab?: 'system' | 'plugins',
 
     /**
      * Toggles the sw-page search bar on/off.
      * Defaults to true.
      */
     displaySearchBar?: boolean,
+
+    /**
+     * Toggles the sw-page smart bar on/off.
+     * Defaults to true.
+     */
+    displaySmartBar?: boolean,
 }
