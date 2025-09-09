@@ -1,5 +1,12 @@
 # Changelog
 
+## 6.3.0
+
+### Minor Changes
+
+- 568fef1: feat: Add message type windowRouterGetPath
+- cf7955c: Add ability to control smart bar when adding setting item
+
 ## 6.2.1
 
 ### Patch Changes

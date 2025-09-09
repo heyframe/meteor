@@ -1,5 +1,18 @@
 # meteor-admin-sdk-app
 
+## 1.0.52
+
+### Patch Changes
+
+- Updated dependencies [568fef1]
+- Updated dependencies [cf7955c]
+- Updated dependencies [1e17597]
+- Updated dependencies [3b8f804]
+- Updated dependencies [58f86a8]
+- Updated dependencies [4c29c56]
+  - @heyframe-ag/meteor-admin-sdk@6.3.0
+  - @heyframe-ag/meteor-component-library@4.17.0
+
 ## 1.0.51
 
 ### Patch Changes
