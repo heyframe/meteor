@@ -101,7 +101,7 @@ global.ResizeObserver = class ResizeObserver {
   }
 };
 
-function createWrapper() {
+function createWrapper(options?: { slots?: Record<string, string> }) {
   return mount(MtDataTable, {
     attachTo: document.body,
     props: {
@@ -121,6 +121,7 @@ function createWrapper() {
         "mt-icon": true,
       },
     },
+    ...options,
   });
 }
 
