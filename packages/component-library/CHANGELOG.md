@@ -1,5 +1,20 @@
 # Changelog
 
+## 4.17.0
+
+### Minor Changes
+
+- 1e17597: Fine tune mt-loader size scaling
+
+### Patch Changes
+
+- 3b8f804: add slot for customize the cell content
+- 58f86a8: Added prop `linkType` to `mt-empty-state` to control the behaviour of the displayed link.
+- 4c29c56: fix error state unit field
+- Updated dependencies [568fef1]
+- Updated dependencies [cf7955c]
+  - @heyframe-ag/meteor-admin-sdk@6.3.0
+
 ## 4.16.1
 
 ### Patch Changes
