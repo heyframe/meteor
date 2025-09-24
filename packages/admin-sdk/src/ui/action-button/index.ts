@@ -1,4 +1,4 @@
-import { createSender } from '../../channel';
+import {createSender} from '../../channel';
 
 export const add = createSender('actionButtonAdd');
 
@@ -29,7 +29,10 @@ export type actionButtonAdd = {
      * Label of your action button.
      */
     label: string,
-
+    /**
+     * Meteor icon of your action button.
+     */
+    meteorIcon?: string,
     /**
      * Callback function which will be called once the action button is clicked.
      */
