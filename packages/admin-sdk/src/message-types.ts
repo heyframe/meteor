@@ -1,6 +1,6 @@
-import type { notificationDispatch } from './notification/index';
+import type { notificationDispatch } from './notification';
 import type { toastDispatch } from './toast';
-import type { windowRedirect, windowReload, windowRouterPush, windowGetId, windowRouterGetPath } from './window/index';
+import type { windowRedirect, windowReload, windowRouterPush, windowGetId, windowRouterGetPath } from './window';
 import type {
   contextLanguage,
   contextEnvironment,
@@ -13,17 +13,17 @@ import type {
   contextUserTimezone,
   contextShopId,
 } from './context';
-import type { uiComponentSectionRenderer } from './ui/component-section/index';
+import type { uiComponentSectionRenderer } from './ui/component-section';
 import type { uiTabsAddTabItem } from './ui/tabs';
 import type { uiModulePaymentOverviewCard } from './ui/module/payment/overview-card';
 import type { cmsRegisterElement, cmsRegisterBlock } from './ui/cms';
-import type { locationUpdateHeight, locationUpdateUrl } from './location/index';
+import type { locationUpdateHeight, locationUpdateUrl } from './location';
 import type { menuCollapse, menuExpand, menuItemAdd } from './ui/menu';
 import type { settingsItemAdd } from './ui/settings';
 import type { mainModuleAdd } from './ui/main-module';
 import type { smartBarButtonAdd, smartBarHide } from './ui/main-module';
-import type { uiModalOpen, uiModalClose, uiModalUpdate } from './ui/modal/index';
-import type { uiMediaModalOpen } from './ui/media-modal';
+import type { uiModalOpen, uiModalClose, uiModalUpdate } from './ui/modal';
+import type { uiMediaModalOpen, uiMediaModalOpenSaveMedia } from './ui/media-modal';
 import type { uiSidebarAdd, uiSidebarClose, uiSidebarRemove } from './ui/sidebar';
 import type { actionButtonAdd } from './ui/action-button';
 import type { actionExecute } from './app/action';
@@ -90,6 +90,7 @@ export interface HeyFrameMessageTypes {
     uiModalClose: uiModalClose,
     uiModalUpdate: uiModalUpdate,
     uiMediaModalOpen: uiMediaModalOpen,
+    uiMediaModalOpenSaveMedia: uiMediaModalOpenSaveMedia,
     uiSidebarAdd: uiSidebarAdd,
     uiSidebarClose: uiSidebarClose,
     uiSidebarRemove: uiSidebarRemove,
