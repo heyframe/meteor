@@ -1,5 +1,19 @@
 # Changelog
 
+## 4.18.0
+
+### Minor Changes
+
+- 24b923e: feat: make center alignment default mt-empty-state
+- f9e43af: feat: implement badge component
+
+### Patch Changes
+
+- 6700ac3: Fix that overflowed elements like popovers aren't visible inside mt-card
+- Updated dependencies [e45479e]
+- Updated dependencies [ac3d977]
+  - @heyframe-ag/meteor-admin-sdk@6.4.0
+
 ## 4.17.0
 
 ### Minor Changes
