@@ -1045,7 +1045,7 @@ describe("mt-tooltip", () => {
       template: `
 <mt-tooltip content="Tooltip">
   <template #default="params">
-    <mt-button v-bind="params" disabled link="https://www.heyframe.com">Focus to open tooltip</mt-button>
+    <mt-button v-bind="params" disabled link="https://www.shopware.com">Focus to open tooltip</mt-button>
   </template>
 </mt-tooltip>
 `,
@@ -1072,7 +1072,7 @@ describe("mt-tooltip", () => {
       template: `
 <mt-tooltip content="Tooltip">
   <template #default="params">
-    <mt-button v-bind="params" isLoading link="https://www.heyframe.com">Focus to open tooltip</mt-button>
+    <mt-button v-bind="params" isLoading link="https://www.shopware.com">Focus to open tooltip</mt-button>
   </template>
 </mt-tooltip>
 `,
@@ -1099,7 +1099,7 @@ describe("mt-tooltip", () => {
       template: `
 <mt-tooltip content="Tooltip" delayDurationInMs="100" hideDelayDurationInMs="50">
   <template #default="params">
-    <mt-button v-bind="params" link="https://www.heyframe.com" disabled>Hover to open tooltip</mt-button>
+    <mt-button v-bind="params" link="https://www.shopware.com" disabled>Hover to open tooltip</mt-button>
   </template>
 </mt-tooltip>`,
       components: {
