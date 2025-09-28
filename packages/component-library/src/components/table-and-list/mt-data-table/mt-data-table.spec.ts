@@ -46,13 +46,13 @@ const columnsFixture: ColumnDefinition[] = [
 
         return value
           ? {
-              variant: "positive",
-              label: "Active",
-            }
+            variant: "positive",
+            label: "Active",
+          }
           : {
-              variant: "critical",
-              label: "Inactive",
-            };
+            variant: "critical",
+            label: "Inactive",
+          };
       },
     },
     position: 200,
@@ -565,6 +565,22 @@ describe("mt-data-table", () => {
 
       expect(wrapper.find(".mt-data-table__table-context-button").exists()).toBeFalsy();
       expect(wrapper.find(".mt-data-table__table-settings-button").exists()).toBeFalsy();
+    });
+
+    it("should render table cell when using slot column", async () => {
+      const wrapper = createWrapper({
+        slots: {
+          "column-name": "My custom name",
+        },
+      });
+
+      await wrapper.setProps({
+        ...wrapper.props(),
+      });
+
+      const dataCellName = wrapper.findAll('[data-cell-column-property="name"]');
+
+      expect(dataCellName[0].html()).toContain(`My custom name`);
     });
   });
 
@@ -1209,6 +1225,31 @@ describe("mt-data-table", () => {
       });
 
       expect(wrapper.find(".mt-data-table-settings").exists()).toBeFalsy();
+    });
+
+    it("should not disable settings table when there is an additonal context menu", async () => {
+      const wrapper = createWrapper();
+
+      await wrapper.setProps({
+        ...wrapper.props(),
+        disableSettingsTable: true,
+        disableDelete: true,
+        disableEdit: true,
+        additionalContextButtons: [
+          {
+            label: "Set Price",
+            key: "set-price",
+          },
+        ],
+      });
+      const contextButton = wrapper.find(
+        ".mt-data-table__table-context-button .mt-context-button button",
+      );
+      expect(contextButton.exists()).toBeTruthy();
+      await contextButton.trigger("click");
+      const menuItem: any = document.querySelector(".mt-context-menu-item");
+      menuItem?.click();
+      expect((wrapper.emitted("context-select")?.[0]?.[0] as any)?.key).toEqual("set-price");
     });
   });
 });
