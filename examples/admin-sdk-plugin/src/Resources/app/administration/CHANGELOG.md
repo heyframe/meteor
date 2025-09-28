@@ -1,5 +1,25 @@
 # administration
 
+## 1.0.31
+
+### Patch Changes
+
+- Updated dependencies [24b923e]
+- Updated dependencies [2dbf714]
+- Updated dependencies [fd404cd]
+- Updated dependencies [e45479e]
+- Updated dependencies [dcfe446]
+- Updated dependencies [6897a25]
+- Updated dependencies [ff0aac0]
+- Updated dependencies [6700ac3]
+- Updated dependencies [afae51b]
+- Updated dependencies [f9e43af]
+- Updated dependencies [154ad27]
+- Updated dependencies [8bdd8bd]
+- Updated dependencies [ac3d977]
+  - @heyframe-ag/meteor-component-library@4.18.0
+  - @heyframe-ag/meteor-admin-sdk@6.4.0
+
 ## 1.0.30
 
 ### Patch Changes
