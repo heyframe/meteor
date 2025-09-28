@@ -39,12 +39,21 @@
             variant="primary"
             @click="
               () => {
-                editor
-                  .chain()
-                  .focus()
-                  .extendMarkRange('link')
-                  .setLink({ href: linkHref, target: linkTarget })
-                  .run();
+                const linkAttributes: { href: string; target?: string; rel?: string } = {
+                  href: linkHref,
+                };
+
+                // Only add target attribute if it's explicitly set and not empty
+                if (linkTarget && linkTarget.trim() !== '') {
+                  linkAttributes.target = linkTarget;
+
+                  // Only add rel attribute for _blank targets
+                  if (linkTarget === '_blank') {
+                    linkAttributes.rel = 'noopener noreferrer nofollow';
+                  }
+                }
+
+                editor.chain().focus().extendMarkRange('link').setLink(linkAttributes).run();
                 showLinkModal = false;
               }
             "

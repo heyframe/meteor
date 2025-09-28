@@ -131,7 +131,24 @@
 <script setup lang="ts">
 // BubbleMenu is used in <component :is> in the template
 import { EditorContent, BubbleMenu, useEditor } from "@tiptap/vue-3";
-import StarterKit from "@tiptap/starter-kit";
+// Import individual StarterKit extensions instead of the bundle
+import Document from "@tiptap/extension-document";
+import Paragraph from "@tiptap/extension-paragraph";
+import Text from "@tiptap/extension-text";
+import Heading from "@tiptap/extension-heading";
+import Bold from "@tiptap/extension-bold";
+import Italic from "@tiptap/extension-italic";
+import Strike from "@tiptap/extension-strike";
+import Code from "@tiptap/extension-code";
+import CodeBlock from "@tiptap/extension-code-block";
+import Blockquote from "@tiptap/extension-blockquote";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+import Dropcursor from "@tiptap/extension-dropcursor";
+import Gapcursor from "@tiptap/extension-gapcursor";
+import History from "@tiptap/extension-history";
+import HardBreak from "@tiptap/extension-hard-break";
 import Underline from "@tiptap/extension-underline";
 import Subscript from "@tiptap/extension-subscript";
 import Superscript from "@tiptap/extension-superscript";
@@ -145,6 +162,14 @@ import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
 import Placeholder from "@tiptap/extension-placeholder";
+import Image from "@tiptap/extension-image";
+import enhanceExtensionsWithAttributes from "./_internal/mt-text-editor-extension-enhancer";
+import {
+  GenericContainer,
+  DivContainer,
+  SemanticElements,
+  FigcaptionElement,
+} from "./_internal/mt-text-editor-html-preserving-extensions";
 import mtTextEditorToolbar, { type CustomButton } from "./_internal/mt-text-editor-toolbar.vue";
 import mtTextEditorToolbarButtonColor, {
   colorButton,
@@ -163,6 +188,7 @@ import CodeMirror from "vue-codemirror6";
 import { computed, h, reactive, ref, useSlots, watch, type PropType } from "vue";
 import { html } from "@codemirror/lang-html";
 import { useI18n } from "vue-i18n";
+import ListItem from "@tiptap/extension-list-item";
 
 const { t } = useI18n({
   useScope: "global",
@@ -276,8 +302,26 @@ const componentClasses = computed(() => {
  */
 const editor = useEditor({
   ...props.tipTapConfig,
-  extensions: [
-    StarterKit,
+  extensions: enhanceExtensionsWithAttributes([
+    // Use individual StarterKit extensions instead of the bundle
+    Document,
+    Paragraph,
+    Text,
+    Heading,
+    Bold,
+    Italic,
+    Strike,
+    Code,
+    CodeBlock,
+    Blockquote,
+    HorizontalRule,
+    BulletList,
+    OrderedList,
+    Dropcursor,
+    Gapcursor,
+    History,
+    HardBreak,
+    ListItem,
     Underline,
     Subscript,
     Superscript,
@@ -288,6 +332,11 @@ const editor = useEditor({
     TextStyle,
     Link.configure({
       openOnClick: false,
+      HTMLAttributes: {
+        // Don't automatically add rel attributes - we'll handle this manually in the link button
+        rel: null,
+        target: null, // Don't set target by default
+      },
     }),
     CharacterCount.configure({}),
     Table.configure({
@@ -300,8 +349,16 @@ const editor = useEditor({
       placeholder: props.placeholder,
       showOnlyWhenEditable: true,
     }),
+    Image.configure({
+      allowBase64: true,
+    }),
+    // Add HTML preserving extensions for span, div, and semantic elements
+    GenericContainer,
+    DivContainer,
+    SemanticElements,
+    FigcaptionElement,
     ...(props.tipTapConfig.extensions ?? []),
-  ],
+  ]),
   content: props.modelValue,
   editorProps: {
     attributes: {
