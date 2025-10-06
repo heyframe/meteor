@@ -89,7 +89,7 @@
   },
   "devDependencies": {
     "@csstools/stylelint-formatter-github": "^1.0.0",
-    "@eslint/js": "^9.20.0",
+    "@eslint/js": "^9.37.0",
     "@heyframe-ag/stylelint-plugin-meteor": "workspace:*",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
