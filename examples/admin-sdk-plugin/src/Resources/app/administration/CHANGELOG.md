@@ -1,5 +1,12 @@
 # administration
 
+## 1.0.32
+
+### Patch Changes
+
+- Updated dependencies [bff5cbe]
+  - @heyframe-ag/meteor-component-library@4.19.0
+
 ## 1.0.31
 
 ### Patch Changes
