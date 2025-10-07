@@ -95,11 +95,11 @@ const { t } = useI18n({
       lastPage: "Last page",
     },
     zh: {
-      "infoText": "第 {start}-{end} 条，共 {totalItems} 条",
-      "firstPage": "首页",
-      "previousPage": "上一页",
-      "nextPage": "下一页",
-      "lastPage": "最后一页"
+      infoText: "第 {start}-{end} 条，共 {totalItems} 条",
+      firstPage: "首页",
+      previousPage: "上一页",
+      nextPage: "下一页",
+      lastPage: "最后一页",
     },
   },
 });

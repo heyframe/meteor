@@ -5,7 +5,9 @@ export function waitUntil(check: () => any, timeOut = 2500) {
       if (retryTime > 100) {
         reject(
           new Error(
-            `"waitUntil": condition ${check.toString().replace(/(\r\n|\n|\r)/gm, "")} not met after ${timeOut / 1000} seconds`,
+            `"waitUntil": condition ${check
+              .toString()
+              .replace(/(\r\n|\n|\r)/gm, "")} not met after ${timeOut / 1000} seconds`,
           ),
         );
         return;

@@ -75,7 +75,7 @@ export default defineComponent({
             notificationCopyFailureMessage: "无法将文本复制到剪贴板。",
             errorTitle: "复制到剪贴板时出错。",
           },
-        }
+        },
       },
     });
 
