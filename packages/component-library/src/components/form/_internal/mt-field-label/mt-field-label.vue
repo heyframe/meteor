@@ -44,9 +44,9 @@ const { t } = useI18n({
       linkInheritance: "Link inheritance",
       unlinkInheritance: "Unlink inheritance",
     },
-    de: {
-      linkInheritance: "Vererbung verknüpfen",
-      unlinkInheritance: "Vererbung trennen",
+    zh: {
+      linkInheritance: "继承",
+      unlinkInheritance: "取消继承",
     },
   },
 });

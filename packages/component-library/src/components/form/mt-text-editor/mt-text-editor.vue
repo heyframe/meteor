@@ -203,13 +203,13 @@ const { t } = useI18n({
         },
       },
     },
-    de: {
+    zh: {
       "mt-text-editor": {
         buttons: {
-          "toggle-code": "Codeansicht umschalten",
+          "toggle-code": "切换代码视图",
         },
         footer: {
-          characters: "{characters} Zeichen",
+          characters: "{characters} 字符",
         },
       },
     },

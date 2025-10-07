@@ -1078,39 +1078,38 @@ export default defineComponent({
             tooltip: "Reload",
           },
         },
-        de: {
-          itemsPerPage: "Einträge pro Seite",
+        zh: {
+          itemsPerPage: "每页条数",
           filter: {
-            numberOfResults:
-              "Keine Einträge gefunden | Ein Eintrag gefunden | {n} Einträge gefunden",
-            addFilter: "Filter hinzufügen",
-            fetchingFilteredResults: "Filterergebnisse werden geladen...",
+            numberOfResults: "未找到数据 | 找到 1 条 | 找到 {n} 条",
+            addFilter: "添加筛选器",
+            fetchingFilteredResults: "正在加载筛选结果...",
           },
           columnSettings: {
-            sortAscending: "Aufsteigend sortieren",
-            sortDescending: "Absteigend sortieren",
-            hideColumn: "Spalte ausblenden",
+            sortAscending: "升序",
+            sortDescending: "降序",
+            hideColumn: "隐藏列",
           },
           addColumnIndicator: {
-            popoverTitle: "Spalteninhalt hinzufügen",
-            tooltipMessage: "Spalte hinzufügen",
+            popoverTitle: "添加列",
+            tooltipMessage: "添加列",
           },
           contextButtons: {
-            edit: "Bearbeiten",
-            delete: "Löschen",
+            edit: "编辑",
+            delete: "删除",
           },
           emptyState: {
-            headline: "Füge dein erstes Element hinzu",
-            description: "Aktuell sind noch keine Elemente vorhanden.",
+            headline: "没有数据",
+            description: "当前还没有任何数据。",
           },
           bulkEdit: {
-            itemsSelected: "1 Element ausgewählt | {n} Elemente ausgewählt",
-            edit: "Bearbeiten",
-            delete: "Löschen",
+            itemsSelected: "已选择 1 条 | 已选择 {n} 条",
+            edit: "编辑",
+            delete: "删除",
             more: "...",
           },
           reload: {
-            tooltip: "Neu laden",
+            tooltip: "重新加载",
           },
         },
       },
