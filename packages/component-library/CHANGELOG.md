@@ -1,5 +1,27 @@
 # Changelog
 
+## 4.18.0
+
+### Minor Changes
+
+- 24b923e: feat: make center alignment default mt-empty-state
+- fd404cd: feat: implement mt-promo-badge component
+- dcfe446: implement snackbar component
+- ff0aac0: Add more support for different HTML elements for the mt-text-editor
+- f9e43af: feat: implement badge component
+- 8bdd8bd: Add ability to append more context button for each row of mt-data-table
+
+### Patch Changes
+
+- 2dbf714: Add color for banner content
+- 6897a25: Pass `Event` to the `onLabelClick` handler
+- 6700ac3: Fix that overflowed elements like popovers aren't visible inside mt-card
+- afae51b: Align colors of placeholders for all input fields
+- 154ad27: stop showing hover styles for disabled number field controls
+- Updated dependencies [e45479e]
+- Updated dependencies [ac3d977]
+  - @heyframe-ag/meteor-admin-sdk@6.4.0
+
 ## 4.17.0
 
 ### Minor Changes
