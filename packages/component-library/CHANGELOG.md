@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.19.0
+
+### Minor Changes
+
+- bff5cbe: Add ability to disable the selection of specific row in mt-data-table
+
 ## 4.18.0
 
 ### Minor Changes

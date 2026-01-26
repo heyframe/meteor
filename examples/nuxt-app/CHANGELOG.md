@@ -1,5 +1,12 @@
 # nuxt-app
 
+## 0.0.47
+
+### Patch Changes
+
+- Updated dependencies [bff5cbe]
+  - @heyframe-ag/meteor-component-library@4.19.0
+
 ## 0.0.46
 
 ### Patch Changes
